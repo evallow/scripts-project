@@ -1,0 +1,17 @@
+Script started on Wed Feb  6 08:16:00 2019
+[?1034h[36merik[m@[32mEriks-MacBook-Air:[33;1m~[m$ tteellnneett  1100....[K66..11..22
+Trying 10.6.1.2...
+Connected to 10.6.1.2.
+Escape character is '^]'.
+
+
+User Access Verification
+
+Password: Kerberos: No default realm defined for Kerberos!
+b3th4nneb
+
+sw1>eennaabbllee
+Password: b3th4nneb
+sw1#ccoonnff  tt
+Enter configuration commands, one per line.  End with CNTL/Z.
+sw1(config)#eexxiitt

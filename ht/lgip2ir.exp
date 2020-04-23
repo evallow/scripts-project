@@ -1,0 +1,77 @@
+#!/usr/bin/expect
+set timeout 3
+log_user 1
+
+# example
+# ./lgip2ir.exp PWR
+
+   # IRCODE definitions
+set ircode(PWR) "sendir,1:1,1,37878,1,1,341,170,22,20,22,20,22,63,22,20,22,20,22,20,22,20,22,20,22,63,22,63,22,20,22,63,22,63,22,63,22,63,22,63,22,20,22,20,22,20,22,63,22,20,22,20,22,20,22,20,22,63,22,63,22,63,22,20,22,63,22,63,22,63,22,63,22,3787"
+
+   # LGTV Volume up:
+set ircode(VOLUP1)  "sendir,1:1,1,37993,1,1,342,170,22,21,22,21,22,63,22,21,22,21,22,21,22,21,22,21,22,63,22,63,22,21,22,63,22,63,22,63,22,63,22,63,22,21,22,63,22,21,22,21,22,21,22,21,22,21,22,21,22,63,22,21,22,63,22,63,22,63,22,63,22,63,22,63,22,3799"
+
+   # LGTV Volume down:
+set ircode(VOLDOWN1)  "sendir,1:1,1,37993,1,1,342,170,22,21,22,21,22,63,22,21,22,21,22,21,22,21,22,21,22,63,22,63,22,21,22,63,22,63,22,63,22,63,22,63,22,63,22,63,22,21,22,21,22,21,22,21,22,21,22,21,22,21,22,21,22,63,22,63,22,63,22,63,22,63,22,63,22,3799"
+
+   # LGTV Mute:
+set ircode(VOLMUTE)  "sendir,1:1,1,37993,1,1,342,170,22,21,22,21,22,63,22,21,22,21,22,21,22,21,22,21,22,63,22,63,22,21,22,63,22,63,22,63,22,63,22,63,22,63,22,21,22,21,22,63,22,21,22,21,22,21,22,21,22,21,22,63,22,63,22,21,22,63,22,63,22,63,22,63,22,3799"
+
+   # step through inputs
+set ircode(NEXTINPUT) "sendir,1:1,1,37878,1,1,341,169,22,20,22,20,22,63,22,20,22,20,22,20,22,20,22,20,22,63,22,63,22,20,22,63,22,63,22,63,22,63,22,63,22,63,22,63,22,20,22,63,22,20,22,20,22,20,22,20,22,20,22,20,22,63,22,20,22,63,22,63,22,63,22,63,22,3787"
+
+
+proc usage {} { 
+   global ircode
+   puts -nonewline " argv: lgip2ir.exp "
+   foreach i [ array names ircode ] {
+      puts -nonewline "$i "
+   }
+   puts "\r"
+}
+
+# check to see if no args
+# if no args
+if { [llength $argv] == 0 } {
+   usage
+   exit -1
+}
+
+# validate commands
+foreach i $argv {
+   if { [info exists ircode($i)] == 0 } {
+   puts "$ircode($i)"
+   usage
+      exit -1
+   }
+}
+
+# returns: 
+# 0 - success; -1 = timeout; -2 = protocol error; -3 = other/usage error
+proc irsend { commands } {
+   set ip2ir 10.6.1.27
+   set ip2irport 4998
+   spawn telnet $ip2ir $ip2irport
+
+   expect "Escape character is '^]'." { 
+      foreach command $commands {
+         send $command
+         send "\r"
+         expect "completeir,1:1,1" { after 500 }
+      }
+    } "Connection refused" {
+      send_user "Connection refused to $ip2ir:$ip2irport \r\n"
+      return -3 
+   } timeout {
+      send_user "\rTimeout waiting for ip2ir response.\r\n"
+      return -1 
+   } 
+}
+
+# Actually call the irsend proc now
+if { [irsend $ircode($argv)] != 0 } {
+   exit -3
+} else {
+   puts "command succeeded!\n"
+   exit 0
+}

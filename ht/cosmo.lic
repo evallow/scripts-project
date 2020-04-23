@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Email</key>
+	<string>erik@misty.com</string>
+	<key>Licenses</key>
+	<string>1</string>
+	<key>Name</key>
+	<string>Erik Vallow</string>
+	<key>Product</key>
+	<string>CosmoPod</string>
+	<key>Signature</key>
+	<data>
+	2rNeymUWB0/QCWvqufDFhdFtD6FnsUob4EPqMUfveejH2MZBSsV6+YeD/dJg9nTqIeDp
+	NpTcmZLsmHwf1ZyVNIW/JwGmnNwg42VVi+XTGb34+2QY00DOrP3yL7p07OEZAwhOzBvU
+	Hc+HZ4KcBWd3+Jv239XTHbGh4XGCZMvS/pc=
+	</data>
+	<key>Timestamp</key>
+	<string>Mon, 05 Apr 2010 17:56:07 +0200</string>
+	<key>TransactionID</key>
+	<string>1M264426RY317963U</string>
+	<key>Upgrade</key>
+	<string>NO</string>
+	<key>Version</key>
+	<string>4</string>
+</dict>
+</plist>

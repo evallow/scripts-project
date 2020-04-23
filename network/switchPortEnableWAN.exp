@@ -1,0 +1,108 @@
+#!/usr/bin/expect --
+# debugging settings. Set log_user & exp_internal for verbose output
+log_user 0; exp_internal 0
+set timeout 5
+set send_slow {1 .05}
+#
+
+# EJV to disable user prompts
+# :%s/send_user/# send_user/g 
+
+# network settings
+set ip "10.6.1.2"
+set password "b3th4nneb\n"
+
+# sw1(config)#int port-channel 1
+# sw1(config-if)#shutdown      <---- send "shutdown", then
+# sw1(config-if)#exit   <---- send "exit", then
+# sw1(config)#exit <---- again send "exit", then
+# sw1#exit  <---- again send "exit", then
+# Connection closed by foreign host.
+
+
+# example
+# ./switchPortDisable.exp top|bottom port 1-48
+proc usage {} {
+   send_user "argv: switchPortDisable.sh <TOP|BOTTOM> <port#: 1-48>\r"
+}
+
+proc quit { } {
+   send_user [ close -i exp6 ]
+   send_user "quitting...\n"
+   exit 0
+}
+
+# connect to router by ip 
+send_user "connecting to: $ip\r\n"
+set spawnResult [ spawn telnet $ip ]
+
+send_user "<$spawn_id>\n"
+set id $spawn_id
+
+expect {
+   "*Kerberos!" {
+       send_user "CS: got Kerberos!\n"
+
+       # send return to force another password prompt - workaround
+       # this takes time, and should be removed, perhaps wait for 
+       # something other than "Kerberos!", since I never got 
+       # password to work following that. 
+       send "\r\n"
+       expect "*assword:*" { send_user "got assword\n" }
+       send -- "$password"
+       expect "*sw1>" { send_user "got sw1> prompt\n" }
+
+       # enter 'enable' mode, wait for password prompt
+       # resubmit password, wait for 'sw1#' prompt
+       send -s "enable\n"
+       expect "*Password:*" { send_user "got password\n" }
+       send -- "$password"
+       expect "*sw1#" { send_user "got sw1# prompt\n" }
+
+       # enter 'conf' mode, wait for 'sw1(config)#" prompt
+       send -s "conf t\n" 
+       expect "sw1(config)#" { send_user "got sw1(config)# prompt\n" }
+       
+       # enter 'int port-channel 1' setting mode
+       send -s "int port-channel 1\n"
+       expect "sw1(config-if)#" { send_user "got sw1(config-if)# prompt\n" }
+       
+       # enter ino shutdown' wait for same config-if prompt
+       send -s "no shutdown\n"
+       expect "sw1(config-if)#" { send_user "got sw1(config-if)# prompt\n" }
+
+       # enter exit out of config-if
+       send -s "exit\n"
+       expect "sw1(config)" { send_user "got sw1(config)# prompt\n" }
+
+       # enter exit out of config
+       send -s "exit\n"
+       expect "*sw1#" { send_user "got sw1# prompt\n" }
+
+       # enter exit out of system
+       send -s "exit\n"
+       expect "*Connection closed*host." { send_user "closed connection\n" ; quit }
+
+   }
+   "*connect to remote host*"  {
+      send_user ": can't connect to remote host"
+      exit -1
+   }
+   timeout { send_user "CS: timeout\n"; return -1 }
+}
+
+
+# EJVTODO
+#
+# make send-expect-send -- integrated blocks
+#
+# tune 'after 1000'
+#
+# change toggle to "ON|OFF" args
+# 
+# reduce runtime by removing workaround, wait for something other than Kerberos in 'Password: 
+# Kerberos: No default realm defined for Kerberos!" Need to test theory that cisco is not ready for 
+# password right away, try 'after ms' to test this theory, then remove it once we understand what to wait
+# for that actuall works?
+#
+#

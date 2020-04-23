@@ -1,0 +1,319 @@
+Script started on Fri Feb  8 10:07:37 2019
+[?1034h[36merik[m@[32mEriks-MacBook-Air:[33;1m~/Dropbox/bin/scripts/network[m$ telnet 10.6.1.2
+Trying 10.6.1.2...
+Connected to 10.6.1.2.
+Escape character is '^]'.
+
+
+User Access Verification
+
+Password: Kerberos: No default realm defined for Kerberos!
+
+
+sw1>enable
+Password: 
+sw1#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+sw1(config)#int GigabitEthernet2/37
+sw1(config-if)#shut
+sw1(config-if)#exit
+sw1(config)#exit
+sw1#exit
+Connection closed by foreign host.
+[36merik[m@[32mEriks-MacBook-Air:[33;1m~/Dropbox/bin/scripts/network[m$ mv type [Kscript tes[K[KestRunDisba[K[Kable.txt
+[36merik[m@[32mEriks-MacBook-Air:[33;1m~/Dropbox/bin/scripts/network[m$ ls -la
+total 40
+drwxr-xr-x@  7 erik  staff   224 Feb  8 10:08 [1m[34m.[39;49m[0m
+drwxr-xr-x@ 11 erik  staff   352 Feb  5 07:28 [1m[34m..[39;49m[0m
+-rw-r--r--@  1 erik  staff    18 Feb  6 10:13 .gitignore
+-rw-r--r--@  1 erik  staff   518 Feb  6 10:12 commit
+-rw-r--r--@  1 erik  staff   463 Feb  6 08:18 switch2.txt
+-rwxr-xr-x@  1 erik  staff  2970 Feb  8 10:08 [1m[32mswitchPortDisable.exp[39;49m[0m
+-rw-r--r--@  1 erik  staff   767 Feb  8 10:08 testRunDisable.txt
+[36merik[m@[32mEriks-MacBook-Air:[33;1m~/Dropbox/bin/scripts/network[m$ more testRunDisable.txt 
+[?1h=Script started on Fri Feb  8 10:07:37 2019
+[7mESC[27m[?1034h[7mESC[27m[36merik[7mESC[27m[m@[7mESC[27m[32mEriks-MacBook-Air:[7mESC[27m[33;1m~/Dropbox/bin/scripts/network[7mESC[27m[m$ telnet 10.6.1.2
+Trying 10.6.1.2...
+Connected to 10.6.1.2.
+Escape character is '^]'.
+
+
+User Access Verification
+
+Password: Kerberos: No default realm defined for Kerberos!
+
+
+sw1>enable
+Password: 
+sw1#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+sw1(config)#int GigabitEthernet2/37
+sw1(config-if)#shut
+sw1(config-if)#exit
+sw1(config)#exit
+sw1#exit
+Connection closed by foreign host.
+[7mESC[27m[36merik[7mESC[27m[m@[7mESC[27m[32mEriks-MacBook-Air:[7mESC[27m[33;1m~/Dropbox/bin/scripts/network[7mESC[27m[m$ mv type[7mESC[27m[Kscript te[7mESC[27m[[7mESC[27m[KestRunDisb[7mESC[27m[
+[7mESC[27m[Kable.txt
+[7mESC[27m[36merik[7mESC[27m[m@[7mESC[27m[32mEriks-MacBook-Air:[7mESC[27m[33;1m~/Dropbox/bin/scripts/network[7mESC[27m[m$ 
+[7mtestRunDisable.txt (END)[27m[K[K[K[?1l>[36merik[m@[32mEriks-MacBook-Air:[33;1m~/Dropbox/bin/scripts/network[m$ hexedit testRunDisable.txt 
+bash: hexedit: command not found
+[36merik[m@[32mEriks-MacBook-Air:[33;1m~/Dropbox/bin/scripts/network[m$ brew install hexedit
+Updating Homebrew...
+[34m==>[0m [1mAuto-updated Homebrew![0m
+Updated 1 tap (homebrew/core).
+[34m==>[0m [1mNew Formulae[0m
+anyenv                     bluetoothconnector         git-absorb                 jp                         s3ql
+apache-arrow               bumpversion                grpcurl                    kubeprod                   sn0int
+aws-iam-authenticator      dmg2img                    jinja2-cli                 man-db
+[34m==>[0m [1mUpdated Formulae[0m
+ace                        doctl                      json11                     ncmpcpp                    scipy
+akamai                     dosbox-x                   jsoncpp                    newsboat                   sdcv
+algernon                   dspdfviewer                jsonnet                    nghttp2                    sdf
+ammonite-repl              dynare                     juju-wait                  ngircd                     sf-pwgen
+amqp-cpp                   easyengine                 kakoune                    nim                        sfml
+angular-cli                efl                        kettle                     node                       shfmt
+apache-opennlp             elasticsearch              kibana                     node-build                 shibboleth-sp
+ape                        elixir                     kitchen-sync               node@10                    ship
+apibuilder-cli             embulk                     kotlin                     node@6                     shogun
+appledoc                   emscripten                 krakend                    node@8                     simh
+arangodb                   encfs                      kube-aws                   nordugrid-arc              simple-mtpfs
+aria2                      enet                       kubectx                    nss                        simutrans
+asdf                       enigma                     kubeless                   nu                         siril
+asio                       epubcheck                  kubernetes-cli             numpy                      skaffold
+ask-cli                    erlang                     kubernetes-helm            nuxeo                      sl
+aspcud                     eslint                     kustomize                  nwchem                     soci
+atkmm                      ethereum                   kyoto-cabinet              nzbget                     source-highlight
+aubio                      exploitdb                  ldc                        objc-codegenutils          spdlog
+avian                      fastbit                    ledger                     ocrmypdf                   sphinx
+aws-okta                   fcl                        libbi                      ompl                       sphinx-doc
+aws-sdk-cpp                ffmpeg                     libcec                     onscripter                 spice-protocol
+awscli                     ffmpeg@2.8                 libchaos                   opam                       sshuttle
+azure-cli                  firebase-cli               libgda                     open-mpi                   stk
+bartycrouch                flac                       libgit2                    openal-soft                stone-soup
+basex                      fn                         libglademm                 opencc                     streamlink
+bash                       folly                      libgnomecanvasmm           openclonk                  subversion
+bashdb                     fonttools                  libgpg-error               opencv                     supersonic
+bazel                      freeswitch                 libheif                    opencv@3                   supertux
+bedops                     frugal                     liblas                     opendetex                  swiftformat
+bettercap                  fswatch                    libosinfo                  opensaml                   swiftgen
+bigloo                     fx                         libphonenumber             openvdb                    swiftlint
+binaryen                   gammaray                   libpointing                osm-pbf                    switch-lan-play
+binutils                   gauge                      librealsense               osrm-backend               switchaudio-osx
+bison                      gdal                       libsass                    oxipng                     syncthing
+bit                        gdcm                       libsigc++                  p11-kit                    synfig
+bitcoin                    geant4                     libtiff                    packer                     task
+blahtexml                  genstats                   libvirt                    pacvim                     tbb
+blueutil                   ghc                        libvoikko                  pagmo                      tcl-tk
+boost                      ghc@8.2                    libvpx                     pandoc                     telegraf
+boost-mpi                  ghostscript                libvterm                   pangomm                    terminal-notifier
+boost-python               gibo                       libxml++                   parallel                   tesseract
+boost-python3              git-flow-avh               libxml++3                  passenger                  tgui
+botan                      git-quick-stats            libxml2                    pdf2htmlex                 thors-serializer
+bower                      gitlab-runner              linkerd                    pdfgrep                    timidity
+bundletool                 gjs                        llvm                       pdftoedn                   tintin
+caddy                      glbinding                  llvm@3.9                   pdftoipe                   tmux-mem-cpu-load
+caf                        glib                       llvm@4                     pdnsrec                    tomcat
+caffe                      glibmm                     llvm@5                     percona-server             topgrade
+cairomm                    globjects                  llvm@6                     pgweb                      tracebox
+capnp                      gmsh                       log4cplus                  php                        traefik
+cargo-completion           gnatsd                     logstalgia                 php@7.1                    trafficserver
+carthage                   gnome-builder              logstash                   php@7.2                    typescript
+cassandra@2.1              gnupg-pkcs11-scd           logtalk                    phpmyadmin                 ucloud
+cassandra@2.2              gnuplot                    lsd                        phpunit                    unrar
+cataclysm                  gnutls                     lxc                        pioneer                    upscaledb
+ccrypt                     go                         macvim                     pioneers                   urbit
+certbot                    go@1.10                    mafft                      pipenv                     urdfdom
+cglm                       go@1.8                     magnetix                   planck                     urdfdom_headers
+checkstyle                 go@1.9                     mame                       plantuml                   v8
+chrome-cli                 gobby                      mapcrafter                 platformio                 vala
+chronograf                 godep                      mapnik                     ponyc                      vault
+clamav                     google-benchmark           maxima                     poppler                    vc4asm
+clingo                     goreleaser                 maxwell                    postgres-xc                verilator
+clipsafe                   gource                     mdds                       povray                     vert.x
+closure-compiler           gradle                     mednafen                   prefixsuffix               vim
+clutter-gst                graphite2                  mercurial                  presto                     vips
+cmake                      gsmartcontrol              mesa                       prettier                   visp
+cocoapods                  gssdp                      meson                      prometheus                 vowpal-wabbit
+collectd                   gstreamermm                mesos                      protobuf                   vtk
+composer                   gtk+3                      metashell                  protobuf-c                 w3m
+conan                      gtkmm                      metricbeat                 protobuf-swift             weechat
+conjure-up                 gtkmm3                     mill                       pulseaudio                 wellington
+console_bridge             gtksourceviewmm            minimal-racket             pulumi                     whois
+consul                     gtksourceviewmm3           minio                      puzzles                    widelands
+convox                     guile                      minio-mc                   pycodestyle                wine
+coreutils                  guile@2.0                  mkcert                     pypy                       wireguard-tools
+cppcheck                   haproxy                    mkl-dnn                    pypy3                      wtf
+cppcms                     hcloud                     mkvtoolnix                 pyside                     x265
+cquery                     helmfile                   mogenerator                python                     xalan-c
+cromwell                   hfstospell                 monetdb                    qjackctl                   xcodegen
+cryfs                      howard-hinnant-date        mongo-cxx-driver           quex                       xcproj
+crystal                    htmldoc                    mongodb                    rabbitmq                   xerces-c
+csv-fix                    hub                        mongodb@3.0                re2                        xml-security-c
+ctop                       hugo                       mongodb@3.2                rebar3                     xml-tooling-c
+curl                       hyperscan                  mongodb@3.4                repo                       xqilla
+curl-openssl               i2pd                       mongodb@3.6                rethinkdb                  xsd
+curlpp                     ibex                       mosh                       riak                       xsimd
+cython                     imagemagick                mosquitto                  rocksdb                    xtensor
+dar                        inetutils                  mpd                        rom-tools                  yaml-cpp
+dartsim                    ios-sim                    mplayer                    root                       ykman
+dbxml                      ios-webkit-debug-proxy     mplayershell               rp                         you-get
+devd                       ipv6calc                   mpv                        rtv                        youtube-dl
+dhall-json                 iso-codes                  mutt                       ruby                       zbackup
+diff-so-fancy              jbake                      mysql-client               ruby-build                 zmqpp
+digdag                     jenkins                    mysql-cluster              rust                       znc
+direnv                     jenv                       mysql@5.7                  safe                       zorba
+dlib                       jfrog-cli-go               nats-streaming-server      sbcl                       zsh
+dnsperf                    jhipster                   ncdu                       sccache
+[34m==>[0m [1mRenamed Formulae[0m
+resin-cli -> balena-cli
+[34m==>[0m [1mDeleted Formulae[0m
+liblastfm                                    percona-server@5.6                           ruby@1.8
+
+[34m==>[0m [1mDownloading https://homebrew.bintray.com/bottles/hexedit-1.4.2.high_sierra.bottle.tar.gz[0m
+#                                                                          2.6%######################################################################## 100.0%
+[34m==>[0m [1mPouring hexedit-1.4.2.high_sierra.bottle.tar.gz[0m
+🍺  /usr/local/Cellar/hexedit/1.4.2: 8 files, 72.8KB
+[34m==>[0m [1m`brew cleanup` has not been run in 30 days, running now...[0m
+Removing: /Users/erik/Library/Caches/Homebrew/linkage.db... (16KB)
+Removing: /Users/erik/Library/Caches/Homebrew/telnet-54.50.1.high_sierra.bottle.1.tar.gz... (94.2KB)
+Removing: /Users/erik/Library/Logs/Homebrew/wakeonlan... (64B)
+Removing: /Users/erik/Library/Logs/Homebrew/telnet... (64B)
+[36merik[m@[32mEriks-MacBook-Air:[33;1m~/Dropbox/bin/scripts/network[m$ brew install hexedithexedit testRunDisable.txt 
+[?1049h[1;60r(B[m[4l[?7h[H[2J[?1h=00000000   53 63 72 69  70 74 20 73  74 61 72 74  65 64 20 6F  6E 20 46 72  69 20 46 65  62 20 20 38  (B[0;1mS(B[mcript started on Fri Feb  8
+0000001C   20 31 30 3A  30 37 3A 33  37 20 32 30  31 39 0A 1B  5B 3F 31 30  33 34 68 1B  5B 33 36 6D   10:07:37 2019..[?1034h.[36m
+00000038   65 72 69 6B  1B 5B 6D 40  1B 5B 33 32  6D 45 72 69  6B 73 2D 4D  61 63 42 6F  6F 6B 2D 41  erik.[m@.[32mEriks-MacBook-A
+00000054   69 72 3A 1B  5B 33 33 3B  31 6D 7E 2F  44 72 6F 70  62 6F 78 2F  62 69 6E 2F  73 63 72 69  ir:.[33;1m~/Dropbox/bin/scri
+00000070   70 74 73 2F  6E 65 74 77  6F 72 6B 1B  5B 6D 24 20  74 65 6C 6E  65 74 20 31  30 2E 36 2E  pts/network.[m$ telnet 10.6.
+0000008C   31 2E 32 0D  0A 54 72 79  69 6E 67 20  31 30 2E 36  2E 31 2E 32  2E 2E 2E 0D  0A 43 6F 6E  1.2..Trying 10.6.1.2.....Con
+000000A8   6E 65 63 74  65 64 20 74  6F 20 31 30  2E 36 2E 31  2E 32 2E 0D  0A 45 73 63  61 70 65 20  nected to 10.6.1.2...Escape
+000000C4   63 68 61 72  61 63 74 65  72 20 69 73  20 27 5E 5D  27 2E 0D 0A  0D 0A 0D 0A  55 73 65 72  character is '^]'.......User
+000000E0   20 41 63 63  65 73 73 20  56 65 72 69  66 69 63 61  74 69 6F 6E  0D 0A 0D 0A  50 61 73 73   Access Verification....Pass
+000000FC   77 6F 72 64  3A 20 4B 65  72 62 65 72  6F 73 3A 20  4E 6F 20 64  65 66 61 75  6C 74 20 72  word: Kerberos: No default r
+00000118   65 61 6C 6D  20 64 65 66  69 6E 65 64  20 66 6F 72  20 4B 65 72  62 65 72 6F  73 21 0D 0A  ealm defined for Kerberos!..
+00000134   0D 0A 0D 0A  73 77 31 3E  65 6E 61 62  6C 65 0D 0A  50 61 73 73  77 6F 72 64  3A 20 0D 0A  ....sw1>enable..Password: ..
+00000150   73 77 31 23  63 6F 6E 66  20 74 0D 0A  45 6E 74 65  72 20 63 6F  6E 66 69 67  75 72 61 74  sw1#conf t..Enter configurat
+0000016C   69 6F 6E 20  63 6F 6D 6D  61 6E 64 73  2C 20 6F 6E  65 20 70 65  72 20 6C 69  6E 65 2E 20  ion commands, one per line.
+00000188   20 45 6E 64  20 77 69 74  68 20 43 4E  54 4C 2F 5A  2E 0D 0A 73  77 31 28 63  6F 6E 66 69   End with CNTL/Z...sw1(confi
+000001A4   67 29 23 69  6E 74 20 47  69 67 61 62  69 74 45 74  68 65 72 6E  65 74 32 2F  33 37 0D 0A  g)#int GigabitEthernet2/37..
+000001C0   73 77 31 28  63 6F 6E 66  69 67 2D 69  66 29 23 73  68 75 74 0D  0A 73 77 31  28 63 6F 6E  sw1(config-if)#shut..sw1(con
+000001DC   66 69 67 2D  69 66 29 23  65 78 69 74  0D 0A 73 77  31 28 63 6F  6E 66 69 67  29 23 65 78  fig-if)#exit..sw1(config)#ex
+000001F8   69 74 0D 0A  73 77 31 23  65 78 69 74  0D 0A 43 6F  6E 6E 65 63  74 69 6F 6E  20 63 6C 6F  it..sw1#exit..Connection clo
+00000214   73 65 64 20  62 79 20 66  6F 72 65 69  67 6E 20 68  6F 73 74 2E  0D 0A 1B 5B  33 36 6D 65  sed by foreign host....[36me
+00000230   72 69 6B 1B  5B 6D 40 1B  5B 33 32 6D  45 72 69 6B  73 2D 4D 61  63 42 6F 6F  6B 2D 41 69  rik.[m@.[32mEriks-MacBook-Ai
+0000024C   72 3A 1B 5B  33 33 3B 31  6D 7E 2F 44  72 6F 70 62  6F 78 2F 62  69 6E 2F 73  63 72 69 70  r:.[33;1m~/Dropbox/bin/scrip
+00000268   74 73 2F 6E  65 74 77 6F  72 6B 1B 5B  6D 24 20 6D  76 20 74 79  70 65 20 08  1B 5B 4B 73  ts/network.[m$ mv type ..[Ks
+00000284   63 72 69 70  74 20 74 65  73 08 1B 5B  4B 08 1B 5B  4B 65 73 74  52 75 6E 44  69 73 62 61  cript tes..[K..[KestRunDisba
+000002A0   08 1B 5B 4B  08 1B 5B 4B  61 62 6C 65  2E 74 78 74  0D 0A 1B 5B  33 36 6D 65  72 69 6B 1B  ..[K..[Kable.txt...[36merik.
+000002BC   5B 6D 40 1B  5B 33 32 6D  45 72 69 6B  73 2D 4D 61  63 42 6F 6F  6B 2D 41 69  72 3A 1B 5B  [m@.[32mEriks-MacBook-Air:.[
+000002D8   33 33 3B 31  6D 7E 2F 44  72 6F 70 62  6F 78 2F 62  69 6E 2F 73  63 72 69 70  74 73 2F 6E  33;1m~/Dropbox/bin/scripts/n
+000002F4   65 74 77 6F  72 6B 1B 5B  6D 24 20 6C  73 20 2D 6C  61 0D 0A 74  6F 74 61 6C  20 34 30 0D  etwork.[m$ ls -la..total 40.
+00000310   0A 64 72 77  78 72 2D 78  72 2D 78 40  20 20 37 20  65 72 69 6B  20 20 73 74  61 66 66 20  .drwxr-xr-x@  7 erik  staff
+0000032C   20 20 32 32  34 20 46 65  62 20 20 38  20 31 30 3A  30 38 20 1B  5B 31 6D 1B  5B 33 34 6D    224 Feb  8 10:08 .[1m.[34m
+00000348   2E 1B 5B 33  39 3B 34 39  6D 1B 5B 30  6D 0D 0A 64  72 77 78 72  2D 78 72 2D  78 40 20 31  ..[39;49m.[0m..drwxr-xr-x@ 1
+00000364   31 20 65 72  69 6B 20 20  73 74 61 66  66 20 20 20  33 35 32 20  46 65 62 20  20 35 20 30  1 erik  staff   352 Feb  5 0
+00000380   37 3A 32 38  20 1B 5B 31  6D 1B 5B 33  34 6D 2E 2E  1B 5B 33 39  3B 34 39 6D  1B 5B 30 6D  7:28 .[1m.[34m...[39;49m.[0m
+0000039C   0D 0A 2D 72  77 2D 72 2D  2D 72 2D 2D  40 20 20 31  20 65 72 69  6B 20 20 73  74 61 66 66  ..-rw-r--r--@  1 erik  staff
+000003B8   20 20 20 20  31 38 20 46  65 62 20 20  36 20 31 30  3A 31 33 20  2E 67 69 74  69 67 6E 6F[107G18 Feb  6 10:13 .gitigno
+000003D4   72 65 0D 0A  2D 72 77 2D  72 2D 2D 72  2D 2D 40 20  20 31 20 65  72 69 6B 20  20 73 74 61  re..-rw-r--r--@  1 erik  sta
+000003F0   66 66 20 20  20 35 31 38  20 46 65 62  20 20 36 20  31 30 3A 31  32 20 63 6F  6D 6D 69 74  ff   518 Feb  6 10:12 commit
+0000040C   0D 0A 2D 72  77 2D 72 2D  2D 72 2D 2D  40 20 20 31  20 65 72 69  6B 20 20 73  74 61 66 66  ..-rw-r--r--@  1 erik  staff
+00000428   20 20 20 34  36 33 20 46  65 62 20 20  36 20 30 38  3A 31 38 20  73 77 69 74  63 68 32 2E     463 Feb  6 08:18 switch2.
+00000444   74 78 74 0D  0A 2D 72 77  78 72 2D 78  72 2D 78 40  20 20 31 20  65 72 69 6B  20 20 73 74  txt..-rwxr-xr-x@  1 erik  st
+00000460   61 66 66 20  20 32 39 37  30 20 46 65  62 20 20 38  20 31 30 3A  30 38 20 1B  5B 31 6D 1B  aff  2970 Feb  8 10:08 .[1m.
+0000047C   5B 33 32 6D  73 77 69 74  63 68 50 6F  72 74 44 69  73 61 62 6C  65 2E 65 78  70 1B 5B 33  [32mswitchPortDisable.exp.[3
+00000498   39 3B 34 39  6D 1B 5B 30  6D 0D 0A 2D  72 77 2D 72  2D 2D 72 2D  2D 40 20 20  31 20 65 72  9;49m.[0m..-rw-r--r--@  1 er
+000004B4   69 6B 20 20  73 74 61 66  66 20 20 20  37 36 37 20  46 65 62 20  20 38 20 31  30 3A 30 38  ik  staff   767 Feb  8 10:08
+000004D0   20 74 65 73  74 52 75 6E  44 69 73 61  62 6C 65 2E  74 78 74 0D  0A 1B 5B 33  36 6D 65 72   testRunDisable.txt...[36mer
+000004EC   69 6B 1B 5B  6D 40 1B 5B  33 32 6D 45  72 69 6B 73  2D 4D 61 63  42 6F 6F 6B  2D 41 69 72  ik.[m@.[32mEriks-MacBook-Air
+00000508   3A 1B 5B 33  33 3B 31 6D  7E 2F 44 72  6F 70 62 6F  78 2F 62 69  6E 2F 73 63  72 69 70 74  :.[33;1m~/Dropbox/bin/script
+00000524   73 2F 6E 65  74 77 6F 72  6B 1B 5B 6D  24 20 6D 6F  72 65 20 74  65 73 74 52  75 6E 44 69  s/network.[m$ more testRunDi
+00000540   73 61 62 6C  65 2E 74 78  74 20 0D 0A  1B 5B 3F 31  68 1B 3D 0D  53 63 72 69  70 74 20 73  sable.txt ...[?1h.=.Script s
+0000055C   74 61 72 74  65 64 20 6F  6E 20 46 72  69 20 46 65  62 20 20 38  20 31 30 3A  30 37 3A 33  tarted on Fri Feb  8 10:07:3
+00000578   37 20 32 30  31 39 0D 0A  1B 5B 37 6D  45 53 43 1B  5B 32 37 6D  5B 3F 31 30  33 34 68 1B  7 2019...[7mESC.[27m[?1034h.
+00000594   5B 37 6D 45  53 43 1B 5B  32 37 6D 5B  33 36 6D 65  72 69 6B 1B  5B 37 6D 45  53 43 1B 5B  [7mESC.[27m[36merik.[7mESC.[
+000005B0   32 37 6D 5B  6D 40 1B 5B  37 6D 45 53  43 1B 5B 32  37 6D 5B 33  32 6D 45 72  69 6B 73 2D  27m[m@.[7mESC.[27m[32mEriks-
+000005CC   4D 61 63 42  6F 6F 6B 2D  41 69 72 3A  1B 5B 37 6D  45 53 43 1B  5B 32 37 6D  5B 33 33 3B  MacBook-Air:.[7mESC.[27m[33;
+000005E8   31 6D 7E 2F  44 72 6F 70  62 6F 78 2F  62 69 6E 2F  73 63 72 69  70 74 73 2F  6E 65 74 77  1m~/Dropbox/bin/scripts/netw
+00000604   6F 72 6B 1B  5B 37 6D 45  53 43 1B 5B  32 37 6D 5B  6D 24 20 74  65 6C 6E 65  74 20 31 30  ork.[7mESC.[27m[m$ telnet 10
+00000620   2E 36 2E 31  2E 32 0D 0A  54 72 79 69  6E 67 20 31  30 2E 36 2E  31 2E 32 2E  2E 2E 0D 0A  .6.1.2..Trying 10.6.1.2.....
+0000063C   43 6F 6E 6E  65 63 74 65  64 20 74 6F  20 31 30 2E  36 2E 31 2E  32 2E 0D 0A  45 73 63 61  Connected to 10.6.1.2...Esca
+00000658   70 65 20 63  68 61 72 61  63 74 65 72  20 69 73 20  27 5E 5D 27  2E 0D 0A 0D  0A 0D 0A 55  pe character is '^]'.......U
+---  testRunDisable.txt[31G--0x0/0xA6D-----------------------------------------------------------------------------------------[1;12H[H[2J[60;1H[?1049l[?1l>[36merik[m@[32mEriks-MacBook-Air:[33;1m~/Dropbox/bin/scripts/network[m$ 
+[36merik[m@[32mEriks-MacBook-Air:[33;1m~/Dropbox/bin/scripts/network[m$ hexedit testRunDisable.txt [7Pbrew install hexedithexedit testRunDisable.txt [3Pmore[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls -la[Kmv typescript testRunDisable.txt[17Ptelnet 10.6.1.2[9Pscript[1Pipttelnet 10.6.1.2more switch2.txt [2Ptelnet 10.6.1.2more switch2.txt [2Ptelnet 10.6.1.2more switch2.txt cd ~/Dropbox/bin/scripts/network[Kman telnet[K[K[K[K[K[K[K[K[K[K[K./switchPortDisable.exp
+connecting to: 10.6.1.2
+<exp6>
+CS: got Kerberos!
+got assword
+got sw1> prompt
+got password
+got sw1# prompt
+got sw1(config)# prompt
+got sw1(config-if)# prompt
+got sw1(config-if)# prompt
+got sw1(config)# prompt
+got sw1# prompt
+closed connection
+quitting...
+[36merik[m@[32mEriks-MacBook-Air:[33;1m~/Dropbox/bin/scripts/network[m$ 
+[36merik[m@[32mEriks-MacBook-Air:[33;1m~/Dropbox/bin/scripts/network[m$ 
+[36merik[m@[32mEriks-MacBook-Air:[33;1m~/Dropbox/bin/scripts/network[m$ time ./switchPortDisable.expt./switchPortDisable.expi./switchPortDisable.expm./switchPortDisable.expe./switchPortDisable.exp ./switchPortDisable.exp
+connecting to: 10.6.1.2
+<exp6>
+CS: got Kerberos!
+got assword
+got sw1> prompt
+got password
+got sw1# prompt
+got sw1(config)# prompt
+got sw1(config-if)# prompt
+got sw1(config-if)# prompt
+got sw1(config)# prompt
+got sw1# prompt
+closed connection
+quitting...
+
+real	0m7.594s
+user	0m0.024s
+sys	0m0.035s
+[36merik[m@[32mEriks-MacBook-Air:[33;1m~/Dropbox/bin/scripts/network[m$ time ./switchPortDisable.exp
+connecting to: 10.6.1.2
+<exp6>
+CS: got Kerberos!
+got assword
+got sw1> prompt
+got password
+got sw1# prompt
+got sw1(config)# prompt
+got sw1(config-if)# prompt
+got sw1(config-if)# prompt
+got sw1(config)# prompt
+got sw1# prompt
+closed connection
+quitting...
+
+real	0m7.404s
+user	0m0.024s
+sys	0m0.035s
+[36merik[m@[32mEriks-MacBook-Air:[33;1m~/Dropbox/bin/scripts/network[m$ time ./switchPortDisable.exp
+connecting to: 10.6.1.2
+<exp6>
+CS: got Kerberos!
+got assword
+got sw1> prompt
+got password
+got sw1# prompt
+got sw1(config)# prompt
+got sw1(config-if)# prompt
+got sw1(config-if)# prompt
+got sw1(config)# prompt
+got sw1# prompt
+closed connection
+quitting...
+
+real	0m7.518s
+user	0m0.024s
+sys	0m0.035s
+[36merik[m@[32mEriks-MacBook-Air:[33;1m~/Dropbox/bin/scripts/network[m$ cd ..
+[36merik[m@[32mEriks-MacBook-Air:[33;1m~/Dropbox/bin/scripts[m$ vi commit
+[?2004h[?1049h[?1h=[?2004h[1;60r[?12h[?12l[27m[29m[m[H[2J[?25l[60;1H"commit" [New File][2;1H▽[6n[2;1H  [1;1H[>c]11;?[2;1H[94m~                                                                                                                                    [3;1H~                                                                                                                                    [4;1H~                                                                                                                                    [5;1H~                                                                                                                                    [6;1H~                                                                                                                                    [7;1H~                                                                                                                                    [8;1H~                                                                                                                                    [9;1H~                                                                                                                                    [10;1H~                                                                                                                                    [11;1H~                                                                                                                                    [12;1H~                                                                                                                                    [13;1H~                                                                                                                                    [14;1H~                                                                                                                                    [15;1H~                                                                                                                                    [16;1H~                                                                                                                                    [17;1H~                                                                                                                                    [18;1H~                                                                                                                                    [19;1H~                                                                                                                                    [20;1H~                                                                                                                                    [21;1H~                                                                                                                                    [22;1H~                                                                                                                                    [23;1H~                                                                                                                                    [24;1H~                                                                                                                                    [25;1H~                                                                                                                                    [26;1H~                                                                                                                                    [27;1H~                                                                                                                                    [28;1H~                                                                                                                                    [29;1H~                                                                                                                                    [30;1H~                                                                                                                                    [31;1H~                                                                                                                                    [32;1H~                                                                                                                                    [33;1H~                                                                                                                                    [34;1H~                                                                                                                                    [35;1H~                                                                                                                                    [36;1H~                                                                                                                                    [37;1H~                                                                                                                                    [38;1H~                                                                                                                                    [39;1H~                                                                                                                                    [40;1H~                                                                                                                                    [41;1H~                                                                                                                                    [42;1H~                                                                                                                                    [43;1H~                                                                                                                                    [44;1H~                                                                                                                                    [45;1H~                                                                                                                                    [46;1H~                                                                                                                                    [47;1H~                                                                                                                                    [48;1H~                                                                                                                                    [49;1H~                                                                                                                                    [50;1H~                                                                                                                                    [51;1H~                                                                                                                                    [52;1H~                                                                                                                                    [53;1H~                                                                                                                                    [54;1H~                                                                                                                                    [55;1H~                                                                                                                                    [56;1H~                                                                                                                                    [57;1H~                                                                                                                                    [58;1H~                                                                                                                                    [59;1H~                                                                                                                                    [1;1H[?25h

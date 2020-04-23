@@ -1,0 +1,29 @@
+#!/usr/bin/expect
+set timeout 10
+set dencmd [lindex $argv 0]
+log_user 0
+
+spawn telnet denon4311
+expect "Trying"
+expect {
+  timeout {
+    send_user "\rTimeout waiting for Denon response.\r"
+    send_user "$expect_out(buffer)\r"
+    exit
+  }
+  "Connection refused" {
+    send_user "UNABLE\n"
+    exit
+  }
+  "BridgeCo AG Telnet server\r\n"
+}
+send "$dencmd\r"
+expect "$dencmd\r\n"
+expect "*\r"
+send_user "$expect_out(buffer)\n"
+exit
+# EJV - This is a basic script showing how to send commands to the Denon
+# receivers. I tested this with the 4311ci, using basic commands so far.
+# The protocol reference is "Denon Receiver Protocol Ver 4.6a April-06"
+#
+

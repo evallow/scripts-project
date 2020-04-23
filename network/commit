@@ -1,0 +1,1 @@
+git commit -a -m "works. Added temporary ON|OFF macro at top, to be used until arg is available. also created testRunDisable.txt, a clean version of me interacting live with the cisco router for testing purposes. included more todo items at bottom of file"

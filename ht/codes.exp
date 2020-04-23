@@ -1,0 +1,28 @@
+set commandcode(PWROFF) "ka 01 00"
+set commandcode(PWRON) "ka 01 01"
+set commandcode(PWRCHECK) "ka 01 ff"
+
+set commandcode(VOLUME0) "kf 01 00"
+set commandcode(VOLUME10) "kf 01 0A"
+set commandcode(VOLUME20) "kf 01 14"
+set commandcode(VOLUME21) "kf 01 15"
+set commandcode(VOLUMECHECK) "kf 01 FF"
+
+set commandcode(VOLUMEMUTEON) "ke 01 00"
+set commandcode(VOLUMEMUTEOFF) "ke 01 01"
+set commandcode(VOLUMEMUTECHECK) "ke 01 FF"
+
+set commandcode(INPUTHDMI1) "xb 01 90"
+
+set commandcode(INPUTHDMI2) "xb 01 91"
+set commandcode(INPUTAPPLETV) "xb 01 91"
+
+set commandcode(INPUTHDMI3) "xb 01 92"
+set commandcode(INPUTPS4) "xb 01 92"
+set commandcode(INPUTXBOX) "xb 01 92"
+set commandcode(INPUTCONSOLE) "xb 01 92"
+
+set commandcode(INPUTHDMI4) "xb 01 93"
+set commandcode(INPUTCHECK) "xb 01 ff"
+
+set commandcode(FAKECMD) "xy 90 95"

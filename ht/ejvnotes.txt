@@ -1,0 +1,14 @@
+# EJV 20190122 
+#
+# 
+
+# wake lgtv
+wakeonlan 38:8c:50:77:91:fd
+
+# EJV 20190123 - changed 'lgon' to use wakeonlan instead of serial commands, since USB not on when TV in standby
+
+# todo items
+
+• refactor commandsend() to return queried value
+• extend script to handle more than one command at a time
+• extend commandsend() to handle two commands with args IE, VOLUME 20, instead of decrete VOLUMExy
